@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UOL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container" id="login-screen">
+            <h1>Chat UOL</h1>
+            <div class="login-form">
+                <input type="text" id="username-input" placeholder="Enter your username" maxlength="20">
+                <button id="join-btn">Join Chat</button>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chat-screen">
+            <div class="chat-header">
+                <h2>Chat UOL</h2>
+                <div class="online-users">
+                    <span id="online-count">0</span> users online
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="messages-container"></div>
+            
+            <div class="typing-indicator" id="typing-indicator"></div>
+            
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
